@@ -38,6 +38,7 @@ const Sidebar = () => {
               className={cn("flex items-center space-x-2 p-2", {
                 "bg-blue-500 text-slate-50 rounded-md":
                   pathname === navItem.href,
+                  "hover:bg-slate-900 rounded-md": pathname !== navItem.href
               })}
               onClick={()=>router.replace(navItem.href)}
             >

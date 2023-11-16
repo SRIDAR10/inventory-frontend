@@ -11,7 +11,7 @@ const HomeNavBar = () => {
   console.log("home path name", pathname);
   const router = useRouter()
   return (
-    <div className="p-5">
+    <div className="p-5 pb-0">
       <div className="flex space-x-3">
         <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
           <Building2 />
@@ -22,7 +22,6 @@ const HomeNavBar = () => {
         </div>
       </div>
       <nav className="flex space-x-10 pt-4 border-b-2 border-slate-300">
-        {/* <Link href="" className="border-b-4 pb-5 border-blue-500">Dashboard</Link> */}
         {HomeBarNavLinks.map((navLinks) => {
           return (
             <button
