@@ -47,6 +47,21 @@ export const DefaultNavItems = [
   },
 ];
 
+export const InventoryNestedNavItems = [
+  {
+    label: "Items",
+    href: "/inventory/inventory/items",
+  },
+  {
+    label: "Item Groups",
+    href: "/inventory/inventory/itemgroups",
+  },
+  {
+    label: "Adjustments",
+    href: "/inventory/inventory/adjustments",
+  }
+];
+
 export const HomeBarNavLinks=[
 {
     label: "Dashboard",
