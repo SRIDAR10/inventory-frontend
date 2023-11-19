@@ -48,7 +48,7 @@ const Header = () => {
             <ChevronDown className="w-4 h-3" />
           </button>
           <Avatar>
-            <AvatarImage src= {session?.user?.image as string} />
+            <AvatarImage src= {session?.user?.image as string ?? ""} />
           </Avatar>
           <button className="flex items-center">
             <LayoutGrid className="w-6 h-6 text-slate-900" />

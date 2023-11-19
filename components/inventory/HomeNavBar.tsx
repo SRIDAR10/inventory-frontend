@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Building2 } from "lucide-react";
 import React from "react";
 import { HomeBarNavLinks } from "./DefaultNavItems";
@@ -10,7 +10,7 @@ const HomeNavBar = () => {
   const pathname = usePathname();
   const router = useRouter();
   const { data: session, status } = useSession();
-  console.log(session);
+  console.log("session", session);
   return (
     <div className="p-5 pb-0">
       <div className="flex space-x-3">
@@ -18,7 +18,7 @@ const HomeNavBar = () => {
           <Building2 />
         </div>
         <div className="flex flex-col">
-          <p>Hello, {session?.user?.name}</p>
+          <p>Hello, {session?.user?.name ?? null}</p>
           <span>Garat</span>
         </div>
       </div>
@@ -28,10 +28,9 @@ const HomeNavBar = () => {
             <button
               key={navLinks.label}
               className={cn("pb-4", {
-                "border-b-4 border-blue-500":
-                  pathname === navLinks.href,
+                "border-b-4 border-blue-500": pathname === navLinks.href,
               })}
-              onClick={()=>router.push(navLinks.href)}
+              onClick={() => router.push(navLinks.href)}
             >
               {navLinks.label}
             </button>
