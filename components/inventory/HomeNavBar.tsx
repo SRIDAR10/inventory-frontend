@@ -1,6 +1,5 @@
 "use client"
 import { Building2 } from "lucide-react";
-import Link from "next/link";
 import React from "react";
 import { HomeBarNavLinks } from "./DefaultNavItems";
 import { usePathname, useRouter } from "next/navigation";
@@ -8,7 +7,6 @@ import { cn } from "@/lib/utils";
 
 const HomeNavBar = () => {
   const pathname = usePathname();
-  console.log("home path name", pathname);
   const router = useRouter()
   return (
     <div className="p-5 pb-0">
