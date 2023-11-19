@@ -4,10 +4,13 @@ import React from "react";
 import { HomeBarNavLinks } from "./DefaultNavItems";
 import { usePathname, useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { useSession } from "next-auth/react";
 
 const HomeNavBar = () => {
   const pathname = usePathname();
-  const router = useRouter()
+  const router = useRouter();
+  const { data: session, status } = useSession();
+  console.log(session);
   return (
     <div className="p-5 pb-0">
       <div className="flex space-x-3">
@@ -15,7 +18,7 @@ const HomeNavBar = () => {
           <Building2 />
         </div>
         <div className="flex flex-col">
-          <p>Hello, Sridar</p>
+          <p>Hello, {session?.user?.name}</p>
           <span>Garat</span>
         </div>
       </div>
