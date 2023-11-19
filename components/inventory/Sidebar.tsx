@@ -41,7 +41,7 @@ const Sidebar = () => {
           href="#"
         >
           <ShoppingCart />
-          <span className="font-bold text-xl">Inventory</span>
+          <span className="font-bold text-xl">StockPulse</span>
         </Link>
 
         <nav className="flex flex-col gap-3 p-3 px-3 py-6">
